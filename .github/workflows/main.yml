@@ -8,7 +8,7 @@ on:
             - main
 jobs: 
     print-message:
-          runs-on: ubunutu-latest
+          runs-on: ubuntu-latest
           steps:
               # step1
               - name: print welcome message
@@ -16,3 +16,4 @@ jobs:
               # step2
               - name: print hello message
                 run: echo 'hello...'
+                
