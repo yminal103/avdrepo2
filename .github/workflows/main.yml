@@ -1,11 +1,30 @@
+# # pipeline name or workflow name
+# name: First Workflow
+
+# # set trigger
+# on: 
+#     push:
+#         branches:
+#             - main
+# jobs: 
+#     print-message:
+#           runs-on: ubuntu-latest
+#           steps:
+#               # step1
+#               - name: print welcome message
+#                 run: echo 'welcome to github action'
+#               # step2
+#               - name: print hello message
+#                 run: echo 'hello...'
+
+
 # pipeline name or workflow name
 name: First Workflow
 
 # set trigger
 on: 
-    push:
-        branches:
-            - main
+    workflow_dispatch:
+        
 jobs: 
     print-message:
           runs-on: ubuntu-latest
@@ -16,4 +35,3 @@ jobs:
               # step2
               - name: print hello message
                 run: echo 'hello...'
-                
