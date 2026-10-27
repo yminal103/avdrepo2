@@ -1,3 +1,4 @@
+###############33 EVENT BASED #####################
 # # pipeline name or workflow name
 # name: First Workflow
 
@@ -18,13 +19,41 @@
 #                 run: echo 'hello...'
 
 
+
+# ################ MANUALLY #################
+# # pipeline name or workflow name
+# name: First Workflow
+
+# # set trigger
+# on: 
+#     workflow_dispatch:
+
+# jobs: 
+#     print-message:
+#           runs-on: ubuntu-latest
+#           steps:
+#               # step1
+#               - name: print welcome message
+#                 run: echo 'welcome to github action'
+#               # step2
+#               - name: print hello message
+#                 run: echo 'hello...'
+
+
+
+
+############### BOTH #################
 # pipeline name or workflow name
 name: First Workflow
 
 # set trigger
 on: 
+    push:
+        branches:
+            - main
+            
     workflow_dispatch:
-        
+
 jobs: 
     print-message:
           runs-on: ubuntu-latest
